@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-Montserrat);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+:root {
+  --primary-dark-cyan: hsl(185, 75%, 39%);
+  --primary-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --primary-dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --neutral-dark-gray: hsl(0, 0%, 59%);
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  color: var(--neutral-dark-gray);
+  background-color: var(--primary-dark-cyan);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  font-size: 18px;
+  margin: 0 1.5rem;
+}
+
+main {
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  opacity: 0.2;
+  background-color: var(--neutral-dark-gray);
+  width: 100%;
+}
+
+.top-img {
+  position: absolute;
+  top: calc(-30%);
+  left: calc(-50%);
+  z-index: -1;
+}
+
+.bottom-img {
+  position: absolute;
+  bottom: calc(-30%);
+  right: calc(-50%);
+  z-index: -2;
+}
+
+.card {
+  display: grid;
+  place-content: center;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  grid-template-rows: 1fr 1fr auto;
+
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.user-info,
+.status {
+  padding: 15px;
+  margin-top: auto;
+}
+.user-info img {
+  border: 5px solid white;
+  position: absolute;
+  top: calc(25%);
+  left: calc(35%);
+  border-radius: 50%;
+}
+.user-info .user_name {
+  font-weight: var(--fw-bold);
+  font-size: 18px;
+  color: var(--primary-very-dark-desaturated-blue);
+}
+
+.user-info p {
+  font-size: 0.975rem;
+}
+
+.user_name span {
+  margin-left: 5px;
+  font-weight: var(--fw-regular);
+  color: var(--neutral-dark-gray);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.followers span,
+.likes span,
+.photos span {
+  color: var(--primary-very-dark-desaturated-blue);
+  font-weight: var(--fw-bold);
+}
+
+.followers p,
+.likes p,
+.photos p {
+  font-size: 0.775rem;
+}
+
+@media screen and (min-width: 768px) {
+  .top-img {
+    position: absolute;
+    top: calc(-50%);
+    left: calc(-100%);
+    z-index: -1;
+  }
+
+  .bottom-img {
+    position: absolute;
+    bottom: calc(-30%);
+    right: calc(-50%);
+    z-index: -2;
+  }
+}
